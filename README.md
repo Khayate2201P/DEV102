@@ -3,16 +3,23 @@
 Système d'authentification simple en PHP utilisant MySQL et sessions.
 
 ##Fonctionnalités :
+
 -Inscription d'utilisateurs,
+
 -Connexion d'utilisateurs,
+
 -Déconnexion,
+
 -Tableau de bord pour utilisateurs connectés,
+
 -Protection des pages par sessions,
 
 ##Technologies utilisées:
 
 -PHP ,
+
 -MySQL,
+
 -HTML/CSS ,
 
 ##Installation:
