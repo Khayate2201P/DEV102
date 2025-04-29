@@ -61,41 +61,6 @@ h2::after {
     height: 3px;
     background: var(--primary);
 }
-.nav-links {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-links span {
-    color: grey; 
-    font-size: 0.9rem;
-    font-weight: normal; 
-}
-
-
-
-.nav-links a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    background: grey;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05); /* زيد غير التكبير */
-    cursor: pointer;
-}
 
 input {
     width: 100%;
@@ -108,16 +73,14 @@ input {
 
 input:focus {
     border-color: var(--primary);
-    /* حيد transform: scale(1.02); */
     box-shadow: 0 0 10px rgba(46, 204, 113, 0.2);
 }
-
 
 button {
     background: var(--primary);
     color: var(--secondary);
     padding: 1rem;
-    width: 100%; /* خلي البوتون ياخذ عرض 100% */
+    width: 100%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -126,60 +89,60 @@ button {
     font-weight: bold;
     letter-spacing: 1px;
     margin-top: 1rem;
-    text-align: center; /* وسط الكلمة ديال Register */
+    text-align: center;
 }
 
 button:hover {
-    transform: scale(1.05); /* تكبير خفيف */
+    transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-    /* حيدنا rotation نهائياً */
-}
-
-
-.dashboard {
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
-.dashboard h2 {
-    color: var(--primary);
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
 }
 
 .nav-links {
+    margin-top: 1.5rem;
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.nav-links a {
-    color: var(--accent);
+/* Button-style link */
+.link-button {
+    color: var(--primary);
     text-decoration: none;
+    font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
-    background: var(--primary);
-    color: var(--secondary);
-    transform: rotate(-3deg);
+.link-button:hover {
+    background: grey;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Plain text-style link */
+.text-link {
+    color: grey;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
